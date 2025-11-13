@@ -1,4 +1,6 @@
-import { PatientContext, QuestionItem } from "@/types";
+import { PatientContext, PersonalQuestion, QuestionItem } from "@/types";
+
+export const NUM_QUESTIONS = 5;
 
 export const QUESTIONS_POOL: QuestionItem[] = [
   { id: 1, text: 'Do you have any known allergies to medications, food, or environmental factors?' },
@@ -19,4 +21,7 @@ export const INITIAL_PATIENT_CONTEXT: PatientContext = {
   gender: '',
 };
 
-export const NUM_QUESTIONS = 5;
+export const personalQuestions: PersonalQuestion[] = [
+  { label: 'What is your name?', key: 'name', type: 'text' },
+  { label: 'What is your Date of birth (DD/MM/YYYY)?', key: 'dob', type: 'text', placeholder: 'e.g., 25/12/1990' },
+];
